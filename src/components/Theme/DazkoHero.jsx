@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import styles from './styles/DazkoHero.module.css'
-import { Carousel, Button, Image, Tabs } from "antd";
+
+
+import { Carousel, Button, Tabs } from "antd";
 import { TwitterOutlined, FacebookOutlined, InstagramOutlined, RightOutlined } from "@ant-design/icons";
 
 
@@ -8,24 +10,24 @@ export default function DazkoHero() {
     const [isHamburger, setHamburger] = useState(false)
     const [position, setPosition] = useState("top")
 
-    const socialSites = [<TwitterOutlined />, <FacebookOutlined />, <InstagramOutlined />]
+
     const carousellImg = [{
         header: "SHAPE YOUR PERFECT BODY",
         para: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
         button: "TAKE A TOUR NOW",
-        img: "../..//img/dazko-img/bg_1.jpg.webp"
+        img: "/img/dazko-img/bg_3.jpg.webp"
     },
     {
         header: "INCREASE YOUR MUSCLE POWER",
         para: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
         button: "TAKE A TOUR NOW",
-        img: "../..//img/dazko-img/bg_2.jpg.webp"
+        img: "/img/dazko-img/bg_2.jpg.webp"
     },
     {
         header: "YOU ONLY FAIL, WHEN YOU STOP TRYING",
         para: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
         button: "TAKE A TOUR NOW",
-        img: "../..//img/dazko-img/bg_3.jpg.webp"
+        img: "/img/dazko-img/bg_1.jpg.webp"
     },
     ]
     const tabs = ["HOME",
@@ -38,7 +40,7 @@ export default function DazkoHero() {
     ]
 
     return (
-        <section className={`${styles.heroContainer} dazkoHeroConatiner`}>
+        <section className={`${styles.heroContainer} ${styles.dazkoHeroConatiner} dazkoHeroConatiner`}>
 
             {/* responsive */}
 
@@ -63,13 +65,16 @@ export default function DazkoHero() {
             <div className={styles.headerContent}>
                 <div>Fee call <span>+1 234 456 78910</span></div>
                 <div>
-                    {socialSites.map((social, i) => {
-                        return (
-                            <div className={styles.socialSite}>
-                                <a key={i} href="/">{social}</a>
-                            </div>
-                        )
-                    })}
+                    <div className={styles.socialSite}>
+                        <a href={"/"}> <TwitterOutlined /></a>
+                    </div>
+                    <div className={styles.socialSite}>
+                        <a href={"/"}><FacebookOutlined /></a>
+                    </div>
+                    <div className={styles.socialSite}>
+                        <a href={"/"}> <InstagramOutlined /></a>
+                    </div>
+
                 </div>
             </div>
             <div className={`${styles.tabTopBorder} ${isHamburger ? styles.borderActive : styles.borderInActive}`}>
@@ -84,7 +89,7 @@ export default function DazkoHero() {
                             {tabs.map((tab, i) => {
                                 return (
 
-                                    <Tabs.TabPane key={i} tab={tab}></Tabs.TabPane>
+                                    <Tabs.TabPane key={i} tab={tab} />
 
                                 )
                             })}
@@ -92,24 +97,24 @@ export default function DazkoHero() {
                         </Tabs>
 
                     </div>
-                    <span className={styles.memberBtn}><Button>BECOME A MEMBER</Button></span>
+                    <span className={styles.memberBtn}><Button>BECOME A MEMBER</Button><span className={styles.angledBorder}></span></span>
                 </div>
             </div>
 
 
             <div className={`${styles.carouselContainer} carousel-container`}>
-                <Carousel >
+                <Carousel autoplay dots={{ className: 'hero_carousel_dots' }}  >
                     {carousellImg.map((carousel, i) => {
                         return (
                             <div key={i} className={styles.carousel_item_wrapper}>
                                 <div className={styles.backgroundImg}>
-                                    <Image preview={false} className={styles.bgImage} src={carousel.img} height={'100%'} width={'100%'} />
+                                    <img alt="" className={styles.bgImage} src={carousel.img} />
                                 </div>
                                 <div className={styles.heroDescriptionsBg}>
                                     <div className={styles.heroDescriptions}>
                                         <h1>{carousel.header}</h1>
                                         <p>{carousel.para}</p>
-                                        <Button type="primary">{carousel.button} <RightOutlined /></Button>
+                                        <a >{carousel.button}<RightOutlined /></a>
                                     </div>
                                 </div>
                             </div>

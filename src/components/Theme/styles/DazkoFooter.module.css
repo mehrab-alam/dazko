@@ -24,22 +24,29 @@
 }
 
 .footerSection>div:first-child h4 {
+    margin-top: 20px;
     color: #fff;
-    font-size: 3.5rem;
-    margin-bottom: -10px;
+    font-size: 20px;
+    line-height: 24px;
+
 }
 
 .footerSection>div:first-child>div {
+    height: 100%;
+
     font-size: 1.2rem;
     margin: 0;
     color: #e1193e;
-    margin-bottom: 30px;
 }
 
 .footerSection>div:first-child p {
-    font-size: 1.3rem;
+    font-size: 16px;
     width: 350px;
+    font-weight: 400;
+    line-height: 24px;
     color: #cfcecf;
+    margin-top: 80px;
+
 }
 
 .footerSection>div:nth-child(2),
@@ -50,15 +57,16 @@
 .footerSection>div:nth-child(2) h4,
 .footerSection>div:nth-child(3) h4 {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .footerSection>div:nth-child(2)>div:last-child,
 .footerSection>div:nth-child(3)>div:last-child {
     margin-top: 55px;
-    font-size: 1.2rem;
-
-
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
 }
 
 .footerSection>div:nth-child(2)>div:last-child>div {
@@ -70,6 +78,13 @@
     width: 200px;
 
 }
+
+.footerSection>div:nth-child(2)>div:last-child>div:hover {
+    cursor: pointer;
+    color: #e1193e;
+}
+
+
 
 .footerSection>div:nth-child(3)>div:last-child>div {
     margin-bottom: 20px;
@@ -91,6 +106,9 @@
 }
 
 .footerSection>div:last-child {
+
+
+    cursor: pointer;
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -100,7 +118,7 @@
 
 .footerSection>div:last-child img {
     height: 80px;
-    width: 100px;
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -108,23 +126,32 @@
 
 @media only screen and (max-width: 415px) {
     .footerSection {
+        height: 100%;
         flex-direction: column;
+        padding: 10px;
+        width: 100%;
     }
 
     .footerSection>div:first-child p {
         font-size: 1.2rem;
-        width: 350px;
+        width: 100%;
     }
 
     .footerSection>div:last-child {
+        width: 100%;
+        row-gap: 0px;
         grid-template-columns: repeat(1, 1fr);
 
     }
 
     .footerSection>div:last-child img {
-        width: 380px;
+        width: 100%;
         object-fit: cover;
         object-position: center;
+    }
+
+    .footerSection>div:nth-child(3)>div:last-child>div:first-child {
+        width: 100%;
     }
 
 

@@ -1,7 +1,9 @@
 import React from "react"
+
+
 import styles from './styles/DazkoPricing.module.css'
-import { Carousel, Button, Image, Tabs } from "antd";
-import { TwitterOutlined, FacebookOutlined, InstagramOutlined, RightOutlined } from "@ant-design/icons";
+import { Button, } from "antd";
+import { ArrowRightOutlined } from "@ant-design/icons";
 
 const DazkoPricing = () => {
     const pricingDetail = [{
@@ -45,18 +47,18 @@ const DazkoPricing = () => {
 
     const features = [
         {
-            img: "../..//img/dazko-img/pro-icon-1.png",
+            img: "/img/dazko-img/pro-icon-1.png",
             head: "THOUSANDS OF EQUIPMENTS",
             para: "A small river named Duden flows by their place and supplies it with the necessary regelialia. "
         },
         {
-            img: "../..//img/dazko-img/pro-icon-2.png",
+            img: "/img/dazko-img/pro-icon-2.png",
             head: "OPEN 24/7 DAZKO GYM FITNESS",
             para: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
 
         },
         {
-            img: "../..//img/dazko-img/pro-icon-3.png",
+            img: "/img/dazko-img/pro-icon-3.png",
             head: " FOOD SUPPLEMENTS",
             para: "A small river named Duden flows by their place and supplies it with the necessary regelialia.."
 
@@ -69,13 +71,13 @@ const DazkoPricing = () => {
             <div className={styles.priceingDetailes}>
                 {pricingDetail.map((price, i) => {
                     return (
-                        <div>
+                        <div key={i}>
                             <h4>{price.plans} </h4>
                             <h2><span>$</span>{price.price}</h2>
                             {price.training.map((train, i) => {
                                 return (
                                     <div key={i} className={styles.trainingDetails}>
-                                        <span> <RightOutlined /> </span>   {train}
+                                        <span> <ArrowRightOutlined /> </span>   {train}
                                     </div>
                                 )
                             })}
@@ -91,8 +93,13 @@ const DazkoPricing = () => {
                     {features.map((feature, i) => {
                         return (
                             <div className={styles.features} key={i}>
-                                <h2><span><img src={feature.img} alt="" /></span>{feature.head} </h2>
-                                <p>{feature.para} </p>
+                                <img src={feature.img} alt="" />
+                                <div className={styles.featureDescriptions}>
+
+                                    <h2>{feature.head} </h2>
+                                    <p>{feature.para} </p>
+
+                                </div>
                             </div>
                         )
                     })}

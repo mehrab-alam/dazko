@@ -1,7 +1,8 @@
 import styles from './styles/DazkoAbout.module.css'
+
+
 import React from 'react';
-import { Carousel, Button, Image, Tabs } from "antd";
-import { TwitterOutlined, FacebookOutlined, InstagramOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { ArrowRightOutlined } from "@ant-design/icons";
 const DazkoAbout = () => {
     const features = [
         "MEN FITNESS AND WORKOUT",
@@ -25,10 +26,10 @@ const DazkoAbout = () => {
         para: "SATISFIED CLIENTS"
     },]
     return (
-        <section className={styles.aboutSection} >
+        <section className={`${styles.aboutSection} about-container`} >
             <div className={styles.aboutContainer}>
                 <div>
-                    <img src="../..//img/dazko-img/about.png.webp" alt="" />
+                    <img src="/img/dazko-img/about.png.webp" alt="" />
                 </div>
                 <div>
                     <h4>INFORMATION ABOUT US</h4>
@@ -37,8 +38,8 @@ const DazkoAbout = () => {
 
                     {features.map((feature, i) => {
                         return (
-                            <div>
-                                <span><ArrowRightOutlined /></span>   <a key={i}>{feature}</a>
+                            <div key={i}>
+                                <span><ArrowRightOutlined /></span>   <a href="/" key={i}>{feature}</a>
                             </div>
                         )
                     })}

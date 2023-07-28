@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Carousel, Button, Image, Tabs } from "antd";
-import { TwitterOutlined, FacebookOutlined, InstagramOutlined, ArrowRightOutlined } from "@ant-design/icons";
+
+
+import { ArrowRightOutlined } from "@ant-design/icons";
 import styles from './styles/DazkoWorkOut.module.css'
 
 const DazkoWorkOut = () => {
@@ -25,19 +26,19 @@ const DazkoWorkOut = () => {
     const workOut = [
 
         {
-            img: "../..//img/dazko-img/classes-1.jpg.webp",
+            img: "/img/dazko-img/classes-1.jpg.webp",
             descrip: "BODY BUILDING",
             price: "100$",
             active: isActive1
         },
         {
-            img: "../..//img/dazko-img/classes-2.jpg.webp",
+            img: "/img/dazko-img/classes-2.jpg.webp",
             descrip: "WEIGHT LIFTING",
             price: "100$",
             active: isActive2
         },
         {
-            img: "../..//img/dazko-img/classes-3.jpg.webp",
+            img: "/img/dazko-img/classes-3.jpg.webp",
             descrip: "CARDIO",
             price: "100$",
             active: isActive3
@@ -66,7 +67,7 @@ const DazkoWorkOut = () => {
 
             </div>
             <div>
-                <a href="">VIEW ALL CLASSES <ArrowRightOutlined /></a>
+                <a href="/">VIEW ALL CLASSES <ArrowRightOutlined /></a>
 
             </div>
         </section>

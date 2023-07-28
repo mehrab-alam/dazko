@@ -5,9 +5,10 @@
 }
 
 .headerContent {
+
     padding: 0px 20px;
     top: 15px;
-    width: 1170px;
+
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -20,16 +21,18 @@
 }
 
 .headerContent>div:first-child {
+    padding-left: 3px;
     color: #e1193e;
 }
 
 .headerContent>div:first-child span {
     color: #fff;
+    font-size: 1.1rem;
 }
 
 .headerContent>div:last-child {
     display: flex;
-    margin-right: -15px;
+
     gap: 5px;
 }
 
@@ -56,7 +59,8 @@
 .carouselContainer {
 
     position: relative;
-    top: -118px;
+    z-index: 10;
+    top: -157px;
     height: 100%;
     width: 100%;
 
@@ -76,15 +80,7 @@
 }
 
 
-.heroDescriptions {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 1000;
-}
+
 
 .backgroundImg {
     height: 100%;
@@ -92,34 +88,40 @@
 }
 
 .heroDescriptionsBg {
-    background-color: #1211118f;
+    background-color: #030513ab;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     position: absolute;
     z-index: 10;
-    opacity: 1;
     color: #fff;
     padding: 20px;
 }
 
 .heroDescriptions {
+    position: relative;
+    z-index: 1000;
     height: 100%;
-    /* position: relative; */
-    /* max-width: 1200px; */
-    /* margin: 0 auto;
-    display: flex; */
-    /* align-items: center; */
+    max-width: 1200px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 }
 
 
 .heroDescriptions h1 {
     font-style: italic;
-    font-size: 4rem;
-    font-weight: bold;
-    width: 400px;
+    font-size: 60px;
+    font-weight: 700;
+    width: 500px;
+    line-height: 60px;
     margin-bottom: 20px;
+
 }
 
 .heroDescriptions p {
@@ -129,15 +131,18 @@
     color: #cfcecf;
 }
 
-.heroDescriptions Button {
+.heroDescriptions a {
     width: 250px;
     height: 40px;
-    border-radius: 4px;
+    padding-top: 8px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
     background-color: #e1193e;
 
 }
 
-.heroDescriptions Button:hover {
+.heroDescriptions a:hover {
     background-color: #1425af !important;
 }
 
@@ -150,15 +155,16 @@
 }
 
 .tabContainer {
-
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
     padding: 0px 20px;
-    top: 20px;
+    top: 0px;
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 205px;
+    justify-content: space-between;
+    /* gap: 205px; */
 }
 
 .tabContainer .dazkoLogo {
@@ -179,23 +185,40 @@
 }
 
 .memberBtn Button {
-    height: 60px;
+    position: relative;
+    top: 20px;
+
+    height: 50px;
     border-radius: 0px;
+
     background-color: #e1193e;
     border: none;
     color: #fff;
     letter-spacing: 3px;
     margin-left: 20px;
-    -webkit-transform:
-        skewX(-10deg);
-    -moz-transform: skewX(-10deg);
-    -ms-transform: skewX(-10deg);
-    transform: skewX(-10deg);
+
     margin-top: 8px;
 }
 
 .memberBtn Button:hover {
     color: #fff !important;
+}
+
+.angledBorder {
+    display: flex;
+    position: relative;
+    top: -30px;
+    right: 8px;
+    width: 40px;
+    border: none;
+    background-color: #e1193e;
+    -webkit-transform:
+        skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+    height: 50px;
+
 }
 
 .tabTopBorder {
@@ -206,7 +229,7 @@
     height: 2px;
     background-color: red;
     top: 30px;
-    left: 200px;
+    left: 50px;
     background: linear-gradient(to right, rgba(210, 227, 238, 0) 0%, #e1193e 100%);
     width: 700px;
 
@@ -227,22 +250,34 @@
 }
 
 @media only screen and (max-width: 415px) {
+    .heroContainer {
+        max-height: 100%;
+    }
+
+    .heroDescriptionsBg {
+        max-height: 100%;
+    }
+
     .headerContent {
+        display: none;
+    }
+
+    .angledBorder {
         display: none;
     }
 
     .responsiveHeader {
         position: absolute;
         top: 0px;
+        height: 60px;
         width: 100%;
         padding: 10px;
         border: 1px solid;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #000;
-        position: relative;
-        z-index: 10;
+        background-color: #030513;
+        z-index: 100;
     }
 
     .responsiveHeader>div:first-child h3,
@@ -267,33 +302,35 @@
     }
 
     .hamburger>div:last-child {
-        color: #e1193e;
+        color: #ffffffe6;
         font-size: 1.5rem;
-        padding-bottom: 5px;
+        padding-bottom: 3px;
     }
 
     .slice {
-        margin-bottom: 5px;
+        margin-bottom: 3px;
         height: 2px;
-        width: 20px;
-        background-color: #e1193e;
+        width: 14px;
+        background-color: #ffffffe6;
     }
 
     .tabTopBorder {
-        width: 400px;
+        position: absolute;
+        width: 100%;
         left: 0px;
+        top: 57px;
+        transition-delay: .4s;
 
     }
 
     .tabContainer {
         position: absolute;
-        z-index: 5;
+        z-index: 20;
         padding: 0px;
-
-        margin-top: 10px;
-        background-color: #000;
+        /* height: 100%; */
+        margin-top: 40px;
+        background-color: #030513;
         width: 100%;
-        height: 330px;
         transition: all .4s ease-in-out;
 
     }
@@ -303,30 +340,40 @@
     }
 
     .tabContainer>div:nth-child(2) {
-
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-size: 1rem;
+        left: 0px;
+
     }
 
     .memberBtn Button {
+        position: relative;
+        top: 12px;
+        left: 15px;
+        border-radius: 0px;
         height: 40px;
-        width: 150px;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
         font-size: 0.8rem;
         -webkit-transform:
             skewX(0deg);
         -moz-transform: skewX(0deg);
         -ms-transform: skewX(0deg);
         transform: skewX(0deg);
-        margin-left: 10px;
+        margin-left: -5px;
     }
+
+
 
     .carouselContainer {
         top: 0px;
         bottom: 0px;
-        height: 600px;
-        width: 415px;
+        height: 100%;
+        width: 100%;
     }
 
     .borderActive {
@@ -349,17 +396,32 @@
     }
 
     .heroDescriptions h1 {
-        font-size: 2rem;
-        width: 200px;
+        font-size: 35px;
+        line-height: 35px;
+        font-weight: 700;
+        width: 100%;
     }
 
     .heroDescriptions p {
-        font-size: 1.2rem;
-        width: 300px;
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    .heroDescriptions a {
+        width: 50%;
+        height: 40px;
+        font-size: 1rem;
+        padding-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+
     }
 
     .bgImage {
-
+        max-height: 100%;
         object-fit: cover;
         object-position: center;
         -o-object-position: center;

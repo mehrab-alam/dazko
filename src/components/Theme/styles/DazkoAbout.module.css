@@ -7,8 +7,9 @@
 }
 
 .aboutContainer {
+    width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
 }
 
@@ -17,12 +18,19 @@
     height: 470px;
 }
 
+.aboutContainer>div:last-child {
+    margin-top: 25px;
+}
+
 .aboutContainer>div:last-child h4 {
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 14px;
     color: #e1193e;
 }
 
 .aboutContainer>div:last-child h1 {
+    font-weight: bold;
+    color: #011f39;
     font-size: 3rem;
 }
 
@@ -31,11 +39,22 @@
 }
 
 .aboutContainer>div:last-child p {
-    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 16px;
     color: gray;
 }
 
+.aboutContainer>div:last-child>div {
+    margin-bottom: 20px;
+}
+
 .aboutContainer>div:last-child>div>a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 1.2rem;
     cursor: pointer;
     color: #000
 }
@@ -57,10 +76,10 @@
 .experienceContainer>div:first-child {
     position: relative;
     left: 40px;
-    height: 150px;
-    width: 90px;
+    height: 180px;
+    width: 30%;
     border: none;
-    background-color: red;
+    background-color: #e1193e;
     -webkit-transform:
         skewX(-10deg);
     -moz-transform: skewX(-10deg);
@@ -73,25 +92,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 30px 15px;
     border: none;
-    height: 150px;
-    width: 260px;
+    height: 180px;
+    width: 100%;
     background-image: linear-gradient(90deg, transparent 50%, #1425af 50%);
-    -webkit-transform:
-        skewX(-10deg);
-    -moz-transform: skewX(-10deg);
-    -ms-transform: skewX(-10deg);
-    transform: skewX(-10deg);
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
     background-size: 60px 60px;
     background-repeat: repeat;
     color: #fff;
     background-color: #1d2cb5;
 }
 
-.experienceContainer :not(div:first-child, div:nth-child(2)) {
-    margin-left: -15px;
-}
+
 
 @media only screen and (max-width: 415px) {
     .aboutContainer {
@@ -102,9 +117,14 @@
         font-size: 1rem;
     }
 
+    .aboutContainer>div:first-child img {
+        width: 100%;
+    }
+
     .aboutContainer>div:last-child h1 {
-        font-size: 1.8rem;
-        width: 310px;
+        font-size: 2.1rem;
+        font-weight: 800;
+        width: 100%;
     }
 
     .aboutContainer>div:last-child p {
