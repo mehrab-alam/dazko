@@ -38,7 +38,7 @@
 .workOutSection>div:nth-child(3)>div {
     height: 370px;
     width: 100%;
-    border: 1px solid;
+
 }
 
 .workOutClasses {
@@ -207,7 +207,7 @@
     .workOutClassesDescription {
         width: 70%;
         height: 40px;
-        top: -12.5%;
+        top: -13%;
         font-size: 13px;
         font-weight: 600;
         font-style: italic;
