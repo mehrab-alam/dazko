@@ -1,5 +1,6 @@
 .formSection {
     background: url("/img/dazko-img/bg_4.jpg.webp") center/cover no-repeat;
+
     height: 600px;
     width: 100%;
     padding: 0px 10px;
@@ -12,9 +13,9 @@
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    /* z-index: 10; */
+    z-index: 10;
     padding: 10px 20px;
-    top: 22.5%;
+    top: 21%;
     bottom: 77.5%;
 }
 
@@ -172,7 +173,7 @@
 
     .formContent {
         width: 100%;
-        top: 18.5%;
+        top: 17.5%;
         bottom: 81%;
 
         padding: 0px 0px;

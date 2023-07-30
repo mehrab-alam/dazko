@@ -6,6 +6,7 @@
     align-items: center;
     margin-top: 100px;
     margin-bottom: 50px;
+    overflow-x: hidden;
 }
 
 .workOutSection h4 {
@@ -57,16 +58,39 @@
 }
 
 .workOutClassesDescription {
-    height: 40px;
+    height: 60px;
     background-color: #000;
     color: #fff;
     position: relative;
-    top: -45px;
-    padding: 10px;
-    width: 200px;
+    font-style: italic;
+    top: -17.8%;
+    padding: 20px;
+    margin: 0;
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+    width: 70%;
+    text-align: center;
+
+
+}
+
+
+
+.workOutClassesDescription h2 span {
+    height: 60px;
+    width: 40px;
+    background-color: #000;
+    position: absolute;
+    /* left: 90%; */
+    right: -15px;
+    top: 0%;
+    -webkit-transform:
+        skewX(20deg);
+    -moz-transform: skewX(20deg);
+    -ms-transform: skewX(20deg);
+    transform: skewX(20deg);
     display: flex;
-    justify-content: center;
-    align-items: center;
 
 }
 
@@ -76,34 +100,66 @@
     cursor: pointer;
 }
 
+.descripActive h2 span {
+    background-color: #e1193e;
+}
+
 .workOutClassesPrice {
-    display: none;
-    /* position: relative;
-    top: -400px;
-    left: 322px;
+    /* display: none; */
+    position: relative;
+    bottom: 115%;
+    left: 100%;
+    /* right: 10%; */
+    text-align: center;
     background-color: #1425af;
     color: #fff;
-    width: 60px;
+    height: 60px;
+    width: 100px;
+    font-size: 24px;
+    font-weight: 900;
+    /* padding: 5px 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(60px); */
+    transition: all .4s ease-in-out;
+    /* transition-delay: .2s; */
+    /* transform: translateX(100px); */
+}
+
+.workOutClassesPrice span {
+    height: 60px;
+    width: 25px;
+    background-color: #e1193e;
+    -webkit-transform:
+        skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    position: absolute;
+    right: 89%;
+    z-index: -1;
 }
 
 .priceActive {
-    display: none;
-    /* padding: 10px;
+    /* display: none; */
+    padding: 10px;
     display: flex;
-    transform: translateX(0px);
-    height: 30px;
+    transform: translateX(-100px);
+    text-align: center;
     align-items: center;
-    justify-content: left; */
+
+
+
 
 }
 
 
 .priceInActive {
-    display: none;
+    position: relative;
+    z-index: -10;
+    opacity: 0;
+    width: 0px;
+
 }
 
 .workOutSection a {
@@ -150,10 +206,30 @@
 
     .workOutClassesDescription {
         width: 70%;
-        top: -48px;
-
-        font-size: 18px;
-        font-weight: 700;
+        height: 40px;
+        top: -12.5%;
+        font-size: 13px;
+        font-weight: 600;
         font-style: italic;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .workOutClassesDescription h2 {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+
+
+    }
+
+    .workOutClassesDescription h2 span {
+        height: 40px;
+    }
+
+    .workOutClassesPrice {
+        display: none;
     }
 }

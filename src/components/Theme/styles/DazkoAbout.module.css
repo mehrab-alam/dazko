@@ -3,7 +3,8 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-
+    position: relative;
+    bottom: 130px;
 }
 
 .aboutContainer {

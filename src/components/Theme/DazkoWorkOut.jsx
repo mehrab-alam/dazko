@@ -28,19 +28,19 @@ const DazkoWorkOut = () => {
         {
             img: "/img/dazko-img/classes-1.jpg.webp",
             descrip: "BODY BUILDING",
-            price: "100$",
+            price: "$100",
             active: isActive1
         },
         {
             img: "/img/dazko-img/classes-2.jpg.webp",
             descrip: "WEIGHT LIFTING",
-            price: "100$",
+            price: "$100",
             active: isActive2
         },
         {
             img: "/img/dazko-img/classes-3.jpg.webp",
             descrip: "CARDIO",
-            price: "100$",
+            price: "$100",
             active: isActive3
         },
     ]
@@ -48,7 +48,7 @@ const DazkoWorkOut = () => {
         <section className={styles.workOutSection}>
             <h4>OUR CLASSES</h4>
             <h1><span>DAZKO</span> WORKOUT CLASSES</h1>
-            <div>
+            <div className={styles.workOut_wrapper}>
                 {workOut.map((work, i) => {
                     return (
                         <div key={i} className={styles.workOutClasses} onMouseOver={() => {
@@ -59,8 +59,8 @@ const DazkoWorkOut = () => {
                             setActive3(false)
                         }}>
                             <img src={work.img} alt="" />
-                            <div className={`${styles.workOutClassesDescription} ${work.active ? `${styles.descripActive}` : `${styles.descripInActive}`}`}>{work.descrip} </div>
-                            <div className={`${styles.workOutClassesPrice} ${work.active ? `${styles.priceActive}` : `${styles.priceInActive}`}`}>{work.price}</div>
+                            <div className={`${styles.workOutClassesDescription} ${work.active ? `${styles.descripActive}` : `${styles.descripInActive}`}`}> <h2> {work.descrip}<span></span></h2> </div>
+                            <div className={`${styles.workOutClassesPrice} ${work.active ? `${styles.priceActive}` : `${styles.priceInActive}`}`}><span></span>{work.price}</div>
                         </div>
                     )
                 })}
